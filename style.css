@@ -5,11 +5,10 @@ background:#fff8f0;
 text-align:center;
 font-size:20px;
 line-height:1.7;
+overflow-x:hidden;
 }
 
-p{
-font-size:20px;
-}
+/* HERO */
 
 .hero{
 padding:80px 20px;
@@ -33,8 +32,16 @@ font-size:24px;
 
 .date{
 font-size:26px;
-margin-bottom:30px;
+margin-bottom:10px;
 }
+
+.limited{
+font-size:22px;
+color:#ffe082;
+font-weight:bold;
+}
+
+/* COUNTDOWN */
 
 .countdown{
 display:flex;
@@ -56,10 +63,14 @@ font-size:32px;
 font-weight:bold;
 }
 
+/* ABOUT */
+
 .about{
 padding:60px 20px;
 font-size:20px;
 }
+
+/* MENU */
 
 .menu{
 background:#fff3e0;
@@ -75,81 +86,18 @@ gap:25px;
 
 .item{
 background:white;
-padding:25px;
+padding:15px;
 border-radius:15px;
-width:220px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-font-size:18px;
+width:280px;
+box-shadow:0 6px 14px rgba(0,0,0,0.12);
+transition:transform 0.2s;
 }
 
-.location{
-padding:60px 20px;
-font-size:20px;
+.item:hover{
+transform:scale(1.05);
 }
 
-iframe{
-width:90%;
-height:350px;
-border:none;
-border-radius:15px;
-margin-top:20px;
-}
-
-footer{
-padding:25px;
-background:#222;
-color:white;
-font-size:18px;
-}
-
-
-/* floating taco */
-
-.taco-float{
-position:absolute;
-font-size:80px;
-top:20px;
-left:40px;
-animation:floatTaco 6s infinite ease-in-out;
-}
-
-@keyframes floatTaco{
-
-0%{transform:translateY(0)}
-
-50%{transform:translateY(-40px)}
-
-100%{transform:translateY(0)}
-
-}
-
-
-/* taco rain */
-
-#taco-rain{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-pointer-events:none;
-overflow:hidden;
-}
-
-.falling-taco{
-position:absolute;
-top:-50px;
-font-size:30px;
-animation:fall linear;
-}
-
-@keyframes fall{
-
-to{
-transform:translateY(110vh) rotate(360deg);
-}
-
-}
+/* FOOD IMAGES */
 
 .food-image{
 position:relative;
@@ -158,6 +106,7 @@ height:230px;
 overflow:hidden;
 border-radius:12px;
 margin-bottom:10px;
+cursor:pointer;
 }
 
 .food-image img{
@@ -174,234 +123,256 @@ background:rgba(0,0,0,0.6);
 color:white;
 padding:6px;
 font-weight:bold;
-font-size:16px;
-}
-
-.limited{
-font-size:22px;
-margin-top:10px;
-color:#ffe082;
-font-weight:bold;
-}
-
-.item{
-background:white;
-padding:15px;
-border-radius:15px;
-width:280px;
-box-shadow:0 6px 14px rgba(0,0,0,0.12);
-transition:transform 0.2s;
-}
-
-.item:hover{
-transform:scale(1.05);
-}
-
-.whatsapp-button{
-
-position:fixed;
-bottom:20px;
-right:20px;
-
-background:#25D366;
-color:white;
-
-padding:16px 22px;
-
-border-radius:30px;
-
 font-size:18px;
-font-weight:bold;
-
-text-decoration:none;
-
-box-shadow:0 6px 14px rgba(0,0,0,0.25);
-
-z-index:1000;
-
-transition:transform 0.2s;
-
 }
 
-.whatsapp-button:hover{
-transform:scale(1.08);
+/* MAP */
+
+.location{
+padding:60px 20px;
+font-size:20px;
 }
-/* Responsive styles for mobile */
-@media (max-width: 600px) {
-	.logo {
-		width: 140px;
-	}
-	h1 {
-		font-size: 28px;
-	}
-	.subtitle, .date {
-		font-size: 16px;
-	}
-	.countdown {
-		gap: 8px;
-	}
-	.time {
-		width: 60px;
-		padding: 10px;
-	}
-	.menu-items {
-		flex-direction: column;
-		gap: 12px;
-	}
-	.item {
-		width: 90vw;
-		font-size: 16px;
-		padding: 10px;
-	}
-	.food-image {
-		height: 120px;
-	}
-	.location, .about, .menu {
-		padding: 20px 8px;
-		font-size: 14px;
-	}
-	iframe {
-		height: 180px;
-	}
-	.taco-float {
-		font-size: 40px;
-		top: 8px;
-		left: 8px;
-	}
+
+iframe{
+width:90%;
+height:350px;
+border:none;
+border-radius:15px;
+margin-top:20px;
 }
+
+/* DIRECTIONS */
 
 .directions{
-
 padding:60px 20px;
-
 }
 
 .directions-gallery{
-
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
 gap:20px;
-
 }
 
 .direction-img{
-
 width:280px;
 border-radius:14px;
 cursor:pointer;
 transition:transform 0.3s;
-
 }
 
 .direction-img:hover{
-
 transform:scale(1.05);
-
 }
 
-#image-modal{
+/* FOOTER */
 
+footer{
+padding:25px;
+background:#222;
+color:white;
+font-size:18px;
+}
+
+/* FLOATING TACO */
+
+.taco-float{
+position:absolute;
+font-size:80px;
+top:20px;
+left:40px;
+animation:floatTaco 6s infinite ease-in-out;
+}
+
+@keyframes floatTaco{
+0%{transform:translateY(0)}
+50%{transform:translateY(-40px)}
+100%{transform:translateY(0)}
+}
+
+/* TACO RAIN */
+
+#taco-rain{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+.falling-taco{
+position:absolute;
+top:-50px;
+animation:fall linear;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh) rotate(360deg);
+}
+}
+
+/* IMAGE MODAL */
+
+#image-modal{
 display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+z-index:2000;
+}
+
+#modal-image{
+max-width:90%;
+max-height:90%;
+border-radius:12px;
+animation:spinOpen 0.5s;
+}
+
+#close-modal{
+position:absolute;
+top:30px;
+right:30px;
+font-size:30px;
+color:white;
+cursor:pointer;
+}
+
+@keyframes spinOpen{
+0%{
+transform:scale(0.5) rotate(-180deg);
+opacity:0;
+}
+100%{
+transform:scale(1) rotate(0);
+opacity:1;
+}
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-button{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:16px 22px;
+border-radius:30px;
+font-size:18px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 6px 14px rgba(0,0,0,0.25);
+z-index:1000;
+}
+
+/* WHATSAPP POPUP */
+#whatsappPopup{
 
 position:fixed;
-
 top:0;
 left:0;
 
 width:100%;
 height:100%;
 
-background:rgba(0,0,0,0.9);
+background:rgba(0,0,0,0.65);
+
+display:none;
 
 justify-content:center;
 align-items:center;
 
-z-index:2000;
+z-index:9999;
 
 }
 
-#modal-image{
+.popupCard{
 
-max-width:90%;
-max-height:90%;
+background:white;
 
-border-radius:12px;
+padding:35px;
 
-animation:spinOpen 0.5s;
+border-radius:18px;
+
+width:320px;
+
+text-align:center;
+
+position:relative;
+
+box-shadow:0 20px 40px rgba(0,0,0,0.3);
+
+animation:popupShow 0.35s ease;
 
 }
 
-#close-modal{
+.popupCard h2{
+
+margin-top:0;
+font-size:24px;
+
+}
+
+.popupCard p{
+
+font-size:18px;
+line-height:1.5;
+
+}
+
+.joinButton{
+
+display:inline-block;
+
+margin-top:20px;
+
+background:#25D366;
+
+color:white;
+
+padding:14px 24px;
+
+border-radius:30px;
+
+font-weight:bold;
+
+text-decoration:none;
+
+font-size:18px;
+
+}
+
+#closePopup{
 
 position:absolute;
 
-top:30px;
-right:30px;
+top:10px;
+right:15px;
 
-font-size:30px;
-
-color:white;
+font-size:24px;
 
 cursor:pointer;
 
 }
 
-@keyframes spinOpen{
+@keyframes popupShow{
 
-0%{
-transform:scale(0.5) rotate(-180deg);
+from{
 opacity:0;
+transform:scale(0.7);
 }
 
-100%{
-transform:scale(1) rotate(0);
+to{
 opacity:1;
-}
-
-}
-.community-button-floating{
-
-position:fixed;
-
-bottom:20px;
-left:20px;
-
-background:#ff7043;
-
-color:white;
-
-padding:16px 20px;
-
-border-radius:30px;
-
-font-size:18px;
-font-weight:bold;
-
-text-decoration:none;
-
-box-shadow:0 6px 14px rgba(0,0,0,0.25);
-
-z-index:1000;
-
-transition:transform 0.2s;
-
-text-align:center;
-
-}
-
-.community-button-floating:hover{
-
-transform:scale(1.08);
-
-}
-@media (max-width:600px){
-
-.community-button-floating{
-
-font-size:16px;
-padding:14px 16px;
-
+transform:scale(1);
 }
 
 }
