@@ -82,3 +82,29 @@ function startTacoConfetti() {
     }
 
 }
+
+// תמונות תפריט למסך מלא
+
+const foodImages = document.querySelectorAll(".food-image img");
+
+const modal = document.getElementById("image-modal");
+const modalImg = document.getElementById("modal-image");
+const closeModal = document.getElementById("close-modal");
+
+foodImages.forEach(img => {
+
+img.addEventListener("click", () => {
+
+modal.style.display = "flex";
+
+modalImg.src = img.src;
+
+});
+
+});
+
+closeModal.addEventListener("click", () => {
+
+modal.style.display = "none";
+
+});

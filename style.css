@@ -3,8 +3,12 @@ font-family:'Rubik',sans-serif;
 margin:0;
 background:#fff8f0;
 text-align:center;
-font-size:18px;
-overflow-x:hidden;
+font-size:20px;
+line-height:1.7;
+}
+
+p{
+font-size:20px;
 }
 
 .hero{
@@ -264,4 +268,95 @@ transform:scale(1.08);
 		top: 8px;
 		left: 8px;
 	}
+}
+
+.directions{
+
+padding:60px 20px;
+
+}
+
+.directions-gallery{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+
+}
+
+.direction-img{
+
+width:280px;
+border-radius:14px;
+cursor:pointer;
+transition:transform 0.3s;
+
+}
+
+.direction-img:hover{
+
+transform:scale(1.05);
+
+}
+
+#image-modal{
+
+display:none;
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.9);
+
+justify-content:center;
+align-items:center;
+
+z-index:2000;
+
+}
+
+#modal-image{
+
+max-width:90%;
+max-height:90%;
+
+border-radius:12px;
+
+animation:spinOpen 0.5s;
+
+}
+
+#close-modal{
+
+position:absolute;
+
+top:30px;
+right:30px;
+
+font-size:30px;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+@keyframes spinOpen{
+
+0%{
+transform:scale(0.5) rotate(-180deg);
+opacity:0;
+}
+
+100%{
+transform:scale(1) rotate(0);
+opacity:1;
+}
+
 }
